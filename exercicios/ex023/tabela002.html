@@ -25,6 +25,14 @@
             border: 1px solid black;
             padding: 10px;
         }
+
+        caption {
+            font-size: 1.5em;
+            font-weight: bolder;
+            background-color: lightgray;
+            padding: 10px;
+        }
+
         td.num {
             text-align: right;
         }
@@ -33,13 +41,17 @@
 <body>
     <h1>Uso de tabelas grandes</h1>
     <table>
+        <caption>
+            População das unidades federativas
+        </caption>
         <thead>
             <tr>
-                <th>Estado</th>
-                <th>População</th>
+                <th scope="col">Estado</th>
+                <th scope="col" style="width: 100px;">População</th>
             </tr>
         </thead>
         <tbody>
+            
             <tr>
                 <td>São Paulo</td>        
                 <td class="num">45 919 049</td>
@@ -150,8 +162,10 @@
             </tr>
         </tbody>
         <tfoot>
-            <th>Total da população</th>
-            <td><strong>210 147 125</strong></td>
+            <tr>
+                <th scope="row">Total da população</th>
+                <td class="num"><strong>210 147 125</strong></td>
+            </tr>
         </tfoot>
     </table>
 </body>
